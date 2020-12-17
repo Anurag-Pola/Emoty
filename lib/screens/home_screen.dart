@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'Pie_Chart.dart';
 import 'bar_chart.dart';
+import './monthly_page.dart';
+import './weekly_page.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -143,7 +145,9 @@ class Button extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => HomeScreen()),
+          MaterialPageRoute(
+              builder: (context) =>
+                  name == "Weekly" ? WeeklyScreen() : MonthlyScreen()),
         );
       },
       child: Container(
